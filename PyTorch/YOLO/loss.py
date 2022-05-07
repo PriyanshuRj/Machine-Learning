@@ -3,10 +3,6 @@ import torch.nn as nn
 from utils import intersection_over_union
 
 class YoloLoss(nn.Module):
-    """
-    Calculate the loss for yolo (v1) model
-    """
-
     def __init__(self, S=7, B=2, C=20):
         super(YoloLoss, self).__init__()
         self.mse = nn.MSELoss(reduction="sum")

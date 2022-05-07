@@ -94,7 +94,6 @@ class Yolov1(nn.Module):
                         )
                     ]
                     in_channels = conv2[1]
-
         return nn.Sequential(*layers)
 
     def _create_fcs(self, split_size, num_boxes, num_classes):
