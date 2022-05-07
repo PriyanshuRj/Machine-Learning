@@ -285,8 +285,6 @@ def get_bboxes(
     model.train()
     return all_pred_boxes, all_true_boxes
 
-
-
 def convert_cellboxes(predictions, S=7):
     """
     Converts bounding boxes output from Yolo with
@@ -320,7 +318,6 @@ def convert_cellboxes(predictions, S=7):
     converted_preds = torch.cat(
         (predicted_class, best_confidence, converted_bboxes), dim=-1
     )
-
     return converted_preds
 
 
@@ -335,7 +332,6 @@ def cellboxes_to_boxes(out, S=7):
         for bbox_idx in range(S * S):
             bboxes.append([x.item() for x in converted_pred[ex_idx, bbox_idx, :]])
         all_bboxes.append(bboxes)
-
     return all_bboxes
 
 def save_checkpoint(state, filename="my_checkpoint.pth.tar"):
