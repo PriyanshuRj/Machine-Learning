@@ -1,0 +1,9 @@
+torch>=1.7.1
+torchvision==0.12.0
+tqdm==3.5.2
+matplotlib==3.5.2
+numpy==1.22.3
+collections==0.1.6
+pandas==1.4.2
+Pillow==9.1.0
+albumentations==1.1.0
