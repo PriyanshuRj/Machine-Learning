@@ -88,8 +88,8 @@ class KNearestNeighbor:
         return y_pred
 
 if __name__ == "__main__":
-    X = np.loadtxt("example_data/data.txt", delimiter=",")
-    y = np.loadtxt("example_data/targets.txt")
+    X = np.loadtxt("data/data.txt", delimiter=",")
+    y = np.loadtxt("data/targets.txt")
 
     X = np.array([[1, 1], [3, 1], [1, 4], [2, 4], [3, 3], [5, 1]])
     y = np.array([0, 0, 0, 1, 1, 1])
